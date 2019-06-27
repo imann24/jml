@@ -10,7 +10,9 @@
 	<button class="LIKE_A_BUTTON" id="UNIQ_7" x="550" y="375"/>
 	<button class="LIKE_A_BUTTON" id="UNIQ_8" x="600" y="400"/>
 	<button class="LIKE_A_BUTTON" id="UNIQ_9" x="650" y="425"/>
-	<text font_size="10.0"/>
-	<text font_size="15.5"/>
-	<text font_size="21.0"/>
+	<text font="arial" font_size="10.0">Foo</text>
+	<text font="times" font_size="15.5">Bar</text>
+	<text font="sans-serif" font_size="21.0">Baz</text>
+	<text font="arial" font_size="10.0">Hello World</text>
+	<text font="times" font_size="15.5">Hello World</text>
 </root>
