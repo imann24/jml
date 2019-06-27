@@ -1,14 +1,14 @@
 {
     "el": "root",
-    "attributes" : {
+    "attr" : {
         "id" : "MY_ID",
         "class" : "CLASSY"
     },
 	"children": [
         {
     		"el": "button",
-    		"repeat": 10,
-            "attributes" : {
+    		"repeat" : 10,
+            "attr" : {
                 "x" : "200",
                 "y" : "200",
                 "id" : "UNIQ_",
@@ -22,9 +22,27 @@
         },
         {
     		"el": "text",
-    		"repeat": 3,
-            "attributes" : {
+            "inner_providers" : ["Foo", "Bar", "Baz"],
+    		"repeat" : 3,
+            "attr" : {
                 "font_size" : "10"
+            },
+            "attr_providers" : {
+                "font" : ["arial", "times", "sans-serif"]
+            },
+            "repeat_mods": {
+                "font_size" : "ADD:5.5"
+            }
+        },
+        {
+    		"el": "text",
+            "inner" : "Hello World",
+    		"repeat" : 2,
+            "attr" : {
+                "font_size" : "10"
+            },
+            "attr_providers" : {
+                "font" : ["arial", "times", "sans-serif"]
             },
             "repeat_mods": {
                 "font_size" : "ADD:5.5"

@@ -5,7 +5,10 @@ import xml.dom.minidom as minidom
 
 ELEMENT_KEY = "el"
 REPEAT_KEY = "repeat"
-ATTRIBUTES_KEY = "attributes"
+ATTRIBUTES_KEY = "attr"
+ATTRIBUTE_PROVIDERS_KEY = "attr_providers"
+INNER_TEXT_KEY = "inner"
+INNER_TEXT_PROVIDERS_KEY = "inner_providers"
 CHILDREN_KEY = "children"
 REPEAT_MODS_KEY = "repeat_mods"
 ADD_KEY = "ADD"
@@ -31,8 +34,14 @@ def add_to_xml(json_el, xml_el=None):
             created_xml = xml.Element(json_el[ELEMENT_KEY])
         else:
             created_xml = xml.SubElement(xml_el, json_el[ELEMENT_KEY])
+        if INNER_TEXT_KEY in json_el:
+            created_xml.text = json_el[INNER_TEXT_KEY]
+        elif INNER_TEXT_PROVIDERS_KEY in json_el:
+            created_xml.text = json_el[INNER_TEXT_PROVIDERS_KEY][i]
         for attr in json_el.get(ATTRIBUTES_KEY, {}):
             created_xml.set(attr, json_el[ATTRIBUTES_KEY][attr])
+        for attr_provider in json_el.get(ATTRIBUTE_PROVIDERS_KEY, {}):
+            created_xml.set(attr_provider, json_el[ATTRIBUTE_PROVIDERS_KEY][attr_provider][i])
         for mod in repeat_mods:
             mod(created_xml, i)
         for child in json_el.get(CHILDREN_KEY, []):
