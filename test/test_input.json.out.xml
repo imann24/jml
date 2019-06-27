@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<root class="CLASSY" id="MY_ID">
+	<button class="LIKE_A_BUTTON" id="UNIQ_0" x="200" y="200"/>
+	<button class="LIKE_A_BUTTON" id="UNIQ_1" x="250" y="225"/>
+	<button class="LIKE_A_BUTTON" id="UNIQ_2" x="300" y="250"/>
+	<button class="LIKE_A_BUTTON" id="UNIQ_3" x="350" y="275"/>
+	<button class="LIKE_A_BUTTON" id="UNIQ_4" x="400" y="300"/>
+	<button class="LIKE_A_BUTTON" id="UNIQ_5" x="450" y="325"/>
+	<button class="LIKE_A_BUTTON" id="UNIQ_6" x="500" y="350"/>
+	<button class="LIKE_A_BUTTON" id="UNIQ_7" x="550" y="375"/>
+	<button class="LIKE_A_BUTTON" id="UNIQ_8" x="600" y="400"/>
+	<button class="LIKE_A_BUTTON" id="UNIQ_9" x="650" y="425"/>
+	<text font_size="10.0"/>
+	<text font_size="15.5"/>
+	<text font_size="21.0"/>
+</root>

@@ -1,0 +1,34 @@
+{
+    "el": "root",
+    "attributes" : {
+        "id" : "MY_ID",
+        "class" : "CLASSY"
+    },
+	"children": [
+        {
+    		"el": "button",
+    		"repeat": 10,
+            "attributes" : {
+                "x" : "200",
+                "y" : "200",
+                "id" : "UNIQ_",
+                "class" : "LIKE_A_BUTTON"
+            },
+            "repeat_mods": {
+                "id" : "APPEND:IDX",
+                "x" : "ADD:50",
+                "y" : "ADD:25"
+            }
+        },
+        {
+    		"el": "text",
+    		"repeat": 3,
+            "attributes" : {
+                "font_size" : "10"
+            },
+            "repeat_mods": {
+                "font_size" : "ADD:5.5"
+            }
+        }
+    ]
+}
